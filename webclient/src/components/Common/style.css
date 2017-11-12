@@ -1,0 +1,59 @@
+.side-nav {
+    color: rgba(0, 0, 0, 0.870588);
+    background-color: rgb(255, 255, 255);
+    transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+    border-radius: 0px;
+    height: 100%;
+    width: 256px;
+    position: fixed;
+    z-index: 1300;
+    left: 0px;
+    top: 0px;
+    transform: translate(0px, 0px);
+    overflow: auto;
+}
+
+.messages {
+    padding-left: 260px;
+}
+
+.userphoto {
+    height: 50px;
+    float: left;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.messagebody{
+    margin-top: 0px;
+}
+.username {
+    font-weight: bold;
+}
+.created {
+    padding-left: 10px;
+}
+
+.msg {
+    height: 20px;  
+    width: 600px;
+    position: fixed;
+    bottom: 0;
+}
+.send {
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    left: 865px;
+}

@@ -1,0 +1,49 @@
+.Root {
+  text-align: center;
+}
+
+.sign-in {
+  margin: 0 auto;
+}
+.sign-in-div {
+  display: flex;
+  padding-top: 0px;
+}
+FormGroup {
+  padding: 10px;
+}
+
+.sign-in-div {
+  padding-top: 85px;
+}
+
+.email, .password {
+  width: 300px;
+  height: 35px;
+}
+
+.form-header{
+  margin-top: 10px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.submit {
+  margin-top: 20px;
+  margin-left: 105px;
+  background-color: deepskyblue;
+  color: white;
+  border: none;
+  width: 100px;
+  height: 25px;
+  font-size: 16px;
+}
+
+.signup {
+  text-align: center;
+}
+.sign-in-title {
+  margin-top: 0;
+  text-align: center;
+  font-weight: 400;
+}

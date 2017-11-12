@@ -1,0 +1,16 @@
+
+header {
+    background-color: deepskyblue;  
+    color: #FFF;   
+    background-size: 100%;
+    background-size: cover;
+    margin: 0 auto;
+    height: 100px;
+    font-family: inherit;
+    font-size: 22px;
+}
+
+.title {
+    padding-top: 50px;
+    margin: 0;
+}

@@ -1,0 +1,26 @@
+.Root {
+  text-align: center;
+}
+
+.channel {
+  margin: 0 auto;
+}
+.channel-div {
+  display: flex;
+  padding-top: 0px;
+}
+
+FormGroup {
+  padding: 10px;
+}
+
+.submit {
+  margin-top: 20px;
+  margin-left: 105px;
+  background-color: deepskyblue;
+  color: white;
+  border: none;
+  width: 100px;
+  height: 25px;
+  font-size: 16px;
+}
