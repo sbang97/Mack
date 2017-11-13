@@ -7,7 +7,8 @@ import (
 	"fmt"
 )
 
-var pat = "c2919e02dbcd8841abd96383356ea662207004c9c98a1cf9e2ece0d384caf4c7" 
+// enter the access token into this variable
+var pat = "" 
 
 type TokenSource struct {
     AccessToken string
@@ -19,6 +20,7 @@ func (t *TokenSource) Token() (*oauth2.Token, error) {
     }
     return token, nil
 }
+
 func main() {
 	tokenSource := &TokenSource{
 		AccessToken: pat,
@@ -29,7 +31,7 @@ func main() {
 
 	ctx := context.TODO()
 
-	//
+	// this is the configuration for the droplet you are creating
 	createRequest := &godo.DropletMultiCreateRequest{
 		Names:   []string{"apiserver","webclient", "deleteme"},
 		Region: "sfo1",

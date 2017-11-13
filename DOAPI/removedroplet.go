@@ -1,23 +1,25 @@
 package main
 
 import (
-    "context" 
-    "golang.org/x/oauth2" 
-    "github.com/digitalocean/godo" 
+	"context"
 	"fmt"
+
+	"github.com/digitalocean/godo"
+	"golang.org/x/oauth2"
 )
 
-var pat = "c2919e02dbcd8841abd96383356ea662207004c9c98a1cf9e2ece0d384caf4c7" 
+// enter your access token into this variable
+var pat = ""
 
 type TokenSource struct {
-    AccessToken string
+	AccessToken string
 }
 
 func (t *TokenSource) Token() (*oauth2.Token, error) {
-    token := &oauth2.Token{
-        AccessToken: t.AccessToken,
-    }
-    return token, nil
+	token := &oauth2.Token{
+		AccessToken: t.AccessToken,
+	}
+	return token, nil
 }
 func main() {
 	tokenSource := &TokenSource{
@@ -29,13 +31,15 @@ func main() {
 
 	ctx := context.TODO()
 
-	droplet := 45333165
-	_, err := client.LoadBalancers.RemoveDroplets(ctx, "60904d58-0764-4b13-b52a-9d030fd2c96f", droplet)
+	// enter the droplet id into this variable
+	droplet := 123456
+	// enter the load balancer id here for the second argument
+	_, err := client.LoadBalancers.RemoveDroplets(ctx, "", droplet)
 
 	if err != nil {
 		fmt.Printf("Something bad happened: %s", err.Error())
 	} else {
 		fmt.Printf("Removed droplet successfully")
 	}
-	
+
 }

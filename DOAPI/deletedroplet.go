@@ -1,24 +1,27 @@
 package main
 
 import (
-    "context" 
-    "golang.org/x/oauth2" 
-    "github.com/digitalocean/godo" 
+	"context"
 	"fmt"
+
+	"github.com/digitalocean/godo"
+	"golang.org/x/oauth2"
 )
 
-var pat = "c2919e02dbcd8841abd96383356ea662207004c9c98a1cf9e2ece0d384caf4c7" 
+// enter the access token into this variable
+var pat = ""
 
 type TokenSource struct {
-    AccessToken string
+	AccessToken string
 }
 
 func (t *TokenSource) Token() (*oauth2.Token, error) {
-    token := &oauth2.Token{
-        AccessToken: t.AccessToken,
-    }
-    return token, nil
+	token := &oauth2.Token{
+		AccessToken: t.AccessToken,
+	}
+	return token, nil
 }
+
 func main() {
 	tokenSource := &TokenSource{
 		AccessToken: pat,
